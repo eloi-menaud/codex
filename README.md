@@ -1,5 +1,5 @@
 # Codex
-![](readme-rsc/logo.png) 
+![](readme-rsc/codex.png) 
 # Overview
 Codex is a documentation generator. It takes markdown files and creates HTML pages, a common feature found in many other tools. So, why use Codex?
 
