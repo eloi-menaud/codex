@@ -29,7 +29,7 @@ h1{
     font-size: 40px;
     margin-bottom: 30px;
     margin-top: 60px;
-    border-bottom: 5px solid rgb(221, 192, 255); 
+    border-bottom: 4px solid rgb(222, 222, 222); 
     width: fit-content;
 }
 h2{
@@ -48,10 +48,10 @@ h4{
     margin-bottom: 10px;
 }
 p{
-    color: rgb(40,40,40);
+    color: rgb(88, 88, 88);
     font-size: 16px;
     font-weight: 300;
-    line-height: 24px;
+    line-height: 134%;
 }
 p strong{
     color: black;
@@ -68,11 +68,6 @@ header{
     right: 0;
     margin: 18px;
     position: fixed;
-}
-header h1{
-    font-size: 18px;
-    border: none;
-    margin: 0;
 }
 select{
     height: fit-content;
@@ -96,7 +91,9 @@ select {
     appearance: none;
     /* Ajoutez d'autres styles personnalisés ici (par exemple, arrière-plan, bordures, couleurs, etc.) */
   }
-
+  select:hover{
+    cursor: pointer;
+  }
 
 
 
@@ -149,6 +146,7 @@ nav a:hover{
 nav a.active{
     background-color: black;
     color: white;
+    font-style: italic;
 }
 nav p{
     color: black;
@@ -179,7 +177,7 @@ pre{
     color: white;
 }
 .linenos{
-    color: #5e5e5e !important; /* need overwrite here the linenos color*/
+    color: hsl(0, 0%, 37%) !important; /* need overwrite here the linenos color*/
 }
 div.highlight{ 
     color: white;
@@ -216,7 +214,7 @@ ul{
 li{
     margin: 8px 0;
     margin-left: 20px;
-    
+    color: rgb(88, 88, 88);
 }
 
 
@@ -224,15 +222,12 @@ li{
 /* CUSTOM */
 
 span.warn{
-    color: rgb(213, 121, 0);
-    /* background-color: rgba(242, 165, 0, 0.2); */
-    /* padding: 4px 10px; */
-    /* border-radius: 5px; */
+    color: rgb(239, 155, 0);
+    padding:4px 0;
 }
 div.warn{
-    color: rgb(213, 121, 0);
-    background-color: rgba(242, 165, 0, 0.2);
-    /* border: 2px solid  rgb(213, 121, 0,0.25); */
+    color: rgb(239, 155, 0);
+    background-color: rgba(242, 165, 0, 0.15);
     padding: 10px 20px;
     border-radius: 10px;
     margin: 20px 0;
@@ -241,9 +236,7 @@ div.warn{
 
 span.info{
     color: rgb(69, 137, 255);
-    /* background-color: rgb(69, 137, 255,0.2); */
-    /* padding: 4px 10px; */
-    /* border-radius: 5px; */
+    padding:4px 0;
 }
 div.info{
     color: rgb(69, 137, 255);
@@ -255,19 +248,20 @@ div.info{
 }
 
 span.one{
-    color : rgb(0, 0, 0);
+    color : black;
     background-color: rgb(233, 233, 233);
     padding: 2px 5px;
     border-radius: 4px;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 div.img-cont{
+    padding: 50px 0 8px 0;
     border-bottom: 2px solid rgb(239, 239, 239);
 }
 div.img-cont img{
     width: 100%;
-    margin: 40px 0 20px 0;
+    margin-bottom: 20px;
 }
 div.img-cont p{
     text-align: right;
@@ -279,20 +273,41 @@ div.img-cont p{
 
 
 /* ----------- HOME -----------*/
-
-#home h1.title{
-    /* border-bottom: 8px solid rgb(221, 192, 255); */
-    margin-bottom: 50px;
-}
 #home main{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+#home h1.title{
+    font-size: 40px;
+    width: fit-content;
+    margin: 30vh auto 0 auto;
+    border: none;
+    font-family: 'Spline Sans Mono', monospace;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
 #home p{
-    margin-bottom: 30px;
+    position: absolute;
+    bottom: 30px;
+    color: rgb(0, 0, 0);
+    font-size: 13px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 #home select{
     width: 100px;
-
+}
+#home a{
+    margin-left: 4px;
+    color: black;
+    text-decoration: underline;
+}
+#home a:visited{
+    color: black;
+}
+#home p img{
+    width: 20px;
+    margin-left: 10px;
 }
