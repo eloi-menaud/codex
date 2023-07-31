@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spline+Sans+Mono,wght@0,300&display=swap');
+@import url('docs/Sligoil-Micro.otf');
+*{
+    font-family: 'Public Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+header select{
+    font-family: 'Spline Sans Mono', monospace !important;
+}
+pre,pre span, span.one{
+    font-family: 'Spline Sans Mono', monospace;
+    font-weight: 300;
+}
+h1.title{
+    font-size: 60px;
+    width: fit-content;
+    text-align: center;
+    margin: 70px auto 90px auto;
+    border: none;
+}
+h1{
+    font-family: 'Sligoil-Micro', monospace;
+    font-size: 40px;
+    margin-bottom: 30px;
+    margin-top: 60px;
+    border-bottom: 5px solid rgb(221, 192, 255); 
+    width: fit-content;
+}
+h2{
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+h3{
+    font-size: 25px;
+    margin-top: 35px;
+    margin-bottom: 10px;
+}
+h4{
+    font-size: 20px;
+    margin-top: 35px;
+    margin-bottom: 10px;
+}
+p{
+    color: rgb(40,40,40);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+}
+p strong{
+    color: black;
+}
+
+
+
+
+header{
+    height: fit-content;
+    padding: 15px 30px;
+    position: absolute;
+    width: fit-content;
+    right: 0;
+    margin: 18px;
+    position: fixed;
+}
+header h1{
+    font-size: 18px;
+    border: none;
+    margin: 0;
+}
+select{
+    height: fit-content;
+    margin-left: auto;
+    border: 2px solid black;
+    background-color: white;
+    padding: 5px 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    outline: none;
+    text-align: right;
+    /* width: 150px; */
+    overflow: none;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* Ajoutez d'autres styles personnalisés ici (par exemple, arrière-plan, bordures, couleurs, etc.) */
+  }
+
+
+
+
+
+article{
+    margin: 0 auto;
+    padding: 0 260px;
+    max-width: 1300px;
+    margin-bottom: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
+
+nav{
+    margin-left: 20px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 180px;
+    height: calc(100% - 100px);
+    border-bottom: 2px solid rgb(226, 226, 226);
+    font-size: 14px;
+}
+nav a{
+    color: black;
+    text-decoration: none;
+    margin-top: 0;
+    margin-bottom: 5px;
+    padding: 6px 8px;
+    border-radius: 6px;
+    white-space: nowrap;
+    width: 100%;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+}
+nav a:hover{
+    overflow:visible;
+    background-color: black;
+    color: white;
+    min-width: 180px;
+    width: fit-content;
+}
+nav a.active{
+    background-color: black;
+    color: white;
+}
+nav p{
+    color: black;
+    font-weight: bold;
+    border-bottom: 2px solid rgb(222, 222, 222);
+    /* border-radius: 8px; */
+    padding: 8px;
+    margin: 0;
+    margin-top: 25px;
+    margin-bottom: 8px;
+    overflow:hidden;
+    white-space: nowrap;
+    min-width: 180px;
+    font-size: 14px;
+}
+nav p:hover{
+    overflow:visible;
+    width: fit-content;
+}
+
+
+
+
+
+/* ---- for pygments syntaxe highlight ---- */
+
+pre{
+    color: white;
+}
+.linenos{
+    color: #5e5e5e !important; /* need overwrite here the linenos color*/
+}
+div.highlight{ 
+    color: white;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin: 8px 0;
+}
+
+div.highlight::-webkit-scrollbar {
+    width: 0;
+    display: none;
+}
+
+
+
+
+
+hr{
+    margin: 50px auto;
+    width: 100px;
+    border: 2px solid rgb(236, 236, 236);
+}
+hr.small{
+    margin: 15px auto ;
+    width: 100px;
+    border-color: transparent;
+}
+
+ul{
+    margin: 20px 0;
+}
+li{
+    margin: 8px 0;
+    margin-left: 20px;
+    
+}
+
+
+
+/* CUSTOM */
+
+span.warn{
+    color: rgb(213, 121, 0);
+    /* background-color: rgba(242, 165, 0, 0.2); */
+    /* padding: 4px 10px; */
+    /* border-radius: 5px; */
+}
+div.warn{
+    color: rgb(213, 121, 0);
+    background-color: rgba(242, 165, 0, 0.2);
+    /* border: 2px solid  rgb(213, 121, 0,0.25); */
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    
+}
+
+span.info{
+    color: rgb(69, 137, 255);
+    /* background-color: rgb(69, 137, 255,0.2); */
+    /* padding: 4px 10px; */
+    /* border-radius: 5px; */
+}
+div.info{
+    color: rgb(69, 137, 255);
+    background-color: rgb(69, 137, 255,0.2);
+    padding: 10px 20px;
+    border-radius: 5px;
+    border-color: rgb(69, 137, 255);
+    margin: 20px 0;
+}
+
+span.one{
+    color : rgb(0, 0, 0);
+    background-color: rgb(233, 233, 233);
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+div.img-cont{
+    border-bottom: 2px solid rgb(239, 239, 239);
+}
+div.img-cont img{
+    width: 100%;
+    margin: 40px 0 20px 0;
+}
+div.img-cont p{
+    text-align: right;
+    font-size: 14px;
+    color: rgb(150, 150, 150);
+}
+
+
+
+
+/* ----------- HOME -----------*/
+
+#home h1.title{
+    /* border-bottom: 8px solid rgb(221, 192, 255); */
+    margin-bottom: 50px;
+}
+#home main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#home p{
+    margin-bottom: 30px;
+}
+#home select{
+    width: 100px;
+
+}
