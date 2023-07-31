@@ -1,4 +1,4 @@
-Overview
+# Overview
 Codex is a documentation generator. It takes markdown files and creates HTML pages, a common feature found in many other tools. So, why use Codex?
 
 The main idea behind Codex is to keep things simple, enabling you to:
