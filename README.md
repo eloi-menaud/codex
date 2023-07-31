@@ -1,3 +1,5 @@
+# Codex
+![](readme-rsc/logoCodex.png) 
 # Overview
 Codex is a documentation generator. It takes markdown files and creates HTML pages, a common feature found in many other tools. So, why use Codex?
 
@@ -9,8 +11,8 @@ The main idea behind Codex is to keep things simple, enabling you to:
 
 Here's an example of what it looks like with the default user style (and default custom MD syntax):
 
-![](readme-rsc/screen1.png)
-![](readme-rsc/screen2.png)
+![](readme-rsc/preview1.png)
+![](readme-rsc/preview2.png)
 
 
 Additionally, Codex provides (will provide soon...) a ready-to-use GitHub Action configuration file, which allows you to dynamically build your documentation and host it on a GitHub page. This way, you can easily generate documentation for specific sources, such as a website or a local project.
