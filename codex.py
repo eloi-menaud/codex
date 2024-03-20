@@ -12,7 +12,7 @@ yaml_path=f"{codex_dir}/codex.yaml"
 html_path=f"{codex_dir}/codex.html"
 
 config = configparser.ConfigParser()
-config.read('config.ini')
+config.read(f'{codex_dir}/config.ini')
 
 man="""\
 ┌─ man
@@ -36,13 +36,13 @@ def generate(obj):
     res="<section>\n"
     for key in [k for k in obj.keys() if not isinstance(obj[k], dict)]:
         img = f"<img src='./images/{key}.png'>" if os.path.exists(f"{images_path}/{key}.png") else ""
-        res += f"<button onclick=\"event.stopPropagation();window.location.href='{obj[key]}';\">{img}{key}</button>\n"
+        res += f"<button data-url='{obj[key]}'>{img}{key}</button>\n"
         del obj[key]
     res+="</section>\n"
 
     for key in [k for k in obj.keys() if isinstance(obj[k], dict)]:
         img = f"<img src='./images/{key}.png'>" if os.path.exists(f"{images_path}/{key}.png") else ""
-        res += f"""<div onclick="this.classList.toggle('folded');event.stopPropagation();" class='folded'><h2>{img}{key}</h2>{generate(obj[key])}</div>"""
+        res += f"""<div class='folded'><h2>{img}{key}</h2>{generate(obj[key])}</div>"""
     return res
 
 def build():
@@ -52,7 +52,7 @@ def build():
     with open(f'{codex_dir}/tmp.html', 'w+') as file:
         file.write(html)
     subprocess.run(f'cat "{codex_dir}/rsc/template.html" > {html_path}',shell=True)
-    subprocess.run(f"head -n -1 tmp.html >> {html_path}",shell=True)
+    subprocess.run(f"head -n -1 {codex_dir}/tmp.html >> {html_path}",shell=True)
     subprocess.run(f"echo '</main></body></html>' >> {html_path}",shell=True)
     subprocess.run(f"rm {codex_dir}/tmp.html",shell=True)
     print('codex built')
