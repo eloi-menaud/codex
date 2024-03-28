@@ -69,7 +69,7 @@ match args[1]:
         if len(args) >= 3:
             abs_path = os.path.abspath(args[2])
             config['GENERAL']['default'] = abs_path
-            with open('config.ini', 'w') as configfile:
+            with open(f'{set-default}/config.ini', 'w') as configfile:
                 config.write(configfile)
             print(f'default codex dir set to {abs_path}')
         else:
