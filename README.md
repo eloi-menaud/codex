@@ -28,7 +28,7 @@ you must have
 - pyyaml : `pip3 install pyyaml`
 ### 1. Clone this repo
 ### 2. Codex as command
-- `sudo mv -r codex/ /opt/`
+- `sudo mv codex/ /opt/`
 - `sudo ln -s /opt/codex/codex /usr/local/bin/codex`
 - `sudo chmod +x /opt/codex/codex`
 - test by typing `codex`
