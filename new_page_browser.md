@@ -1,7 +1,7 @@
 # set as default new pages
 to use codex as the default page for your browser's new windows, follow the instructions below according to your browser:
 
-## Firefox
+## Firefox (only temporary extension load)
 ### 1
 add a `manifest.json` in the `codex/` dir, past it this :
 ```json

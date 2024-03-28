@@ -1,0 +1,89 @@
+*{
+    font-family: "Spline Sans Mono", monospace;
+    margin      : 0;
+    padding     : 0;
+    box-sizing  : border-box;
+}
+div.folded > :not(h2) {display: none;}
+section{display: flex; flex-direction: row;}
+button{
+    border-radius    : 8px;
+    width            : fit-content;
+    background-color : hsl(0, 0%, 27%);
+    padding          : 8px 12px;
+    outline          : none;
+    border           : none;
+    color            : white;
+    font-weight      : 300;
+    margin           : 5px;
+    box-shadow       : 0px -1px 0px hsl(0, 0%, 42%),   /* top glow */
+                    0px 3px 0px hsl(0, 0%, 18%),    /* bottom perspective */
+                    0px 8px 8px hsl(0, 0%, 0%,35%); /* bottom shadow */
+    display        : flex;
+    flex-direction : row;
+    align-items    : center;
+}
+button:hover{
+    cursor           : pointer;
+    background-color : hsl(231, 68%, 51%);
+    box-shadow       : 0px -1px 0px hsl(231, 68%, 68%), /* top glow */
+                    0px 3px 0px hsl(231, 68%, 30%),  /* bottom perspective */
+                    0px 10px 10px hsl(0, 0%, 0%,0%); /* bottom shadow */
+}
+button:active{
+    transform  : translateY(3px);
+    box-shadow : 0px -1px 0px hsl(231, 68%, 68%);  /* top glow */
+}
+button img{
+    height: 16px;
+    width: 16px;
+    margin-right: 8px;
+    object-fit: contain;
+}
+body{background-color: hsl(0, 0%, 7%);}
+main{
+    width      : 60vw;
+    min-width  : 500px;
+    margin     : 0 auto;
+    margin-top : 50px;
+}
+main div{
+    display             : flex;
+    flex-direction      : column;
+    border-top-color    : hsl(0, 0%, 26%);
+    border-right-color  : hsl(0, 0%, 17%);
+    border-bottom-color : hsl(0, 0%, 18%);
+    border-left-color   : hsl(0, 0%, 17%);
+    border-width        : 1px;
+    border-style        : solid;
+    background-color    : hsl(0, 0%, 10%);
+    border-radius       : 15px;
+    margin              : 20px 0 10px 0;
+    padding             : 10px 20px;
+    box-shadow          : 0px 5px 18px hsl(0, 0%, 6%);
+}
+h2{
+    font-size    : 20px;
+    font-weight  : 400;
+    padding-left : 5px;
+    color        : white;
+}
+main div h2 > img{
+    object-fit: contain;
+    height: 20px;
+    width: 20px;
+    margin-right: 8px ;
+}
+main div h2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+section{margin: 5px;}
+body h1{
+    color       : hsla(0, 0%, 100%, 0.253);
+    font-weight : 400;
+    font-size   : 20px;
+    text-align: center;
+    margin-top: 20px;
+}

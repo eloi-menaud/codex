@@ -1,5 +1,4 @@
 const fold = (event,element) => {element.classList.toggle('folded');event.stopPropagation();}
-
 window.addEventListener("load", function() {
     document.querySelectorAll('main div').forEach(div => {
         div.addEventListener('click', function(event) {
