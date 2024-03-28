@@ -39,7 +39,7 @@ def generate(obj,path):
     return res
 
 def build(path):
-    build_path=f"{path}/build"
+    build_path=path
     with open(f'{path}/codex.yaml', 'r') as file:
         yml=yaml.safe_load(file)
 
@@ -89,7 +89,6 @@ match args[1]:
     case 'cleanup':
         subprocess.run(f"rm {codex_dir}/LICENSE", shell=True)
         subprocess.run(f"rm {codex_dir}/README.md", shell=True)
-        subprocess.run(f"rm {codex_dir}/.gitignore", shell=True)
         subprocess.run(f"rm {codex_dir}/rsc/doc.png", shell=True)
         subprocess.run(f"rm {codex_dir}/new_page_browser.md", shell=True)
         subprocess.run(f'rm -r -f {codex_dir}/.git', shell=True)
